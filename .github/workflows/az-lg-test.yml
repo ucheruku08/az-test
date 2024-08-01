@@ -1,10 +1,20 @@
 name: Run Azure Login on push
+run-name: ${{ inputs.tgt_env }}_${{ inputs.logLevel }} 
+
 on: 
   workflow_dispatch:
     inputs:
         tgt_env:
             description: Enviornment
             required: true
+            type: environment
+        action:
+            description: Action
+            options:
+                - create
+                - create and Copy 1
+                - create and copy 2
+            type: choice
         logLevel:
             description: 'Log level'
 
