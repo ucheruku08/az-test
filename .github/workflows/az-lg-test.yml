@@ -1,5 +1,9 @@
 name: Run Azure Login on push
-on: [push]
+on: 
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
 
 permissions:
     id-token: write
