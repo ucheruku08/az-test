@@ -2,8 +2,11 @@ name: Run Azure Login on push
 on: 
   workflow_dispatch:
     inputs:
-      logLevel:
-        description: 'Log level'
+        tgt_env:
+            description: Enviornment
+            required: true
+        logLevel:
+            description: 'Log level'
 
 permissions:
     id-token: write
